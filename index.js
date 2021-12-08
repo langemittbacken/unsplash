@@ -44,6 +44,9 @@ app.get('/zoomverify/verifyzoom.html', (req, res) => {
 })
 
 app.post('/unsplash', (req, res) => {
+  console.log(req.body)
+  res.send('Chat received')
+  
   if (req.headers.authorization === process.env.zoom_verification_token) {
     res.status(200)
     res.send()
